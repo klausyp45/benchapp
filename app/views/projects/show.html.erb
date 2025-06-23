@@ -1,10 +1,37 @@
-<p style="color: green"><%= notice %></p>
+<div class="card mt-5">
+  <div class="card-header">
+    <h1>Project</h1>
+  </div>
+  
+  <div class="card-body">
+    <p>
+      <strong>Name:</strong>
+      <%= @project.name %>
+    </p>
 
-<%= render @project %>
+    <p>
+      <strong>Description:</strong>
+      <%= @project.description %>
+    </p>
 
-<div>
-  <%= link_to "Edit this project", edit_project_path(@project) %> |
-  <%= link_to "Back to projects", projects_path %>
+    <p>
+      <strong>Content:</strong>
+      <%= simple_format(@project.content) %>
+    </p>
 
-  <%= button_to "Destroy this project", @project, method: :delete %>
+    <p>
+      <strong>Startdate:</strong>
+      <%= @project.startdate.strftime("%B %d, %Y at %I:%M %p") if @project.startdate %>
+    </p>
+
+    <p>
+      <strong>Enddate:</strong>
+      <%= @project.enddate.strftime("%B %d, %Y at %I:%M %p") if @project.enddate %>
+    </p>
+  </div>
+
+  <div class="card-footer">
+    <%= link_to 'Edit', edit_project_path(@project), class: 'btn btn-secondary' %>
+    <%= link_to 'Back', projects_path, class: 'btn btn-outline-secondary' %>
+  </div>
 </div>

@@ -8,3 +8,9 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+// Custom Bootstrap variables should come first
+$primary: #3a7bd5;
+
+// Then import Bootstrap
+@import "bootstrap";

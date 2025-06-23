@@ -4,3 +4,8 @@ import "controllers"
 
 import "trix"
 import "@rails/actiontext"
+
+import 'jquery'
+import '@popperjs/core'
+import 'bootstrap'
+echo 'import "bootstrap"' >> app/javascript/application.js
