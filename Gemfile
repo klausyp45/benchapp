@@ -73,5 +73,6 @@ gem 'pundit' # for authorization
 
 # Visual improvements
 gem 'bootstrap', '~> 5.3'
+gem 'sassc-rails'
 gem 'font-awesome-sass'
 gem 'chartkick' # for graphs
