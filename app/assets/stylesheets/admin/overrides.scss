@@ -1,0 +1,62 @@
+// app/assets/stylesheets/admin/overrides.scss
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+.admin {
+  .header {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    padding: 1rem;
+    margin-bottom: 2rem;
+
+    h1 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+  }
+
+  .sidebar {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    padding: 1rem;
+
+    .nav-link {
+      color: #495057;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+
+      &:hover {
+        background-color: #e9ecef;
+      }
+
+      &.active {
+        background-color: #007bff;
+        color: white;
+      }
+    }
+  }
+
+  .main-content {
+    padding: 2rem;
+  }
+
+  .card {
+    border: none;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    margin-bottom: 2rem;
+
+    .card-header {
+      background-color: white;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+      font-weight: 600;
+    }
+  }
+
+  .table {
+    th {
+      border-top: none;
+      border-bottom: 2px solid #dee2e6;
+    }
+  }
+}

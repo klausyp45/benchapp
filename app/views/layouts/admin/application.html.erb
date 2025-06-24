@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin Dashboard</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+  </head>
+  <body class="admin">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2 sidebar">
+          <div class="d-flex flex-column flex-shrink-0 p-3">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
+              <span class="fs-4">Admin Panel</span>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+              <li class="nav-item">
+                <%= link_to "Projects", admin_projects_path, class: "nav-link #{'active' if controller_name == 'projects'}" %>
+              </li>
+              <li>
+                <%= link_to "Main Site", root_path, class: "nav-link" %>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-10 main-content">
+          <div class="header">
+            <h1><%= content_for(:title) || "Dashboard" %></h1>
+          </div>
+          
+          <%= render "layouts/flash" %>
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

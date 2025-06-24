@@ -8,4 +8,6 @@ import "@rails/actiontext"
 // JS Dependencies
 import 'jquery'
 import '@popperjs/core'
-import 'bootstrap'
+import 'bootstrap'import "bootstrap"
+import "chartkick"
+import "Chart.bundle"
